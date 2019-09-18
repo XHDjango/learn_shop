@@ -1,10 +1,13 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>{{ title }}</title>
     {% block ext_css %}
-
+        <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+        <link rel="stylesheet" href="{% static 'css/swiper.css' %}">
+        <link rel="stylesheet" href="{% static 'css/reset.css' %}">
     {% endblock %}
 </head>
 <body>
@@ -24,7 +27,8 @@
 
 
 {% block ext_js %}
-
+    <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
 {% endblock %}
 </body>
 </html>
