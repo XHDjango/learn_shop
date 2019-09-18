@@ -13,12 +13,39 @@
 {% block footer %}
     {{ block.super }}
     <footer>
-        <a href="#" class="home">
+        <a href="{% url 'shop:home' %}" class="home">
             <dl>
                 <dt>
                     <span></span>
                 </dt>
                 <dd>首页</dd>
+            </dl>
+        </a>
+
+        <a href="{% url 'shop:market' %}" class="market">
+            <dl>
+                <dt>
+                    <span></span>
+                </dt>
+                <dd>闪购</dd>
+            </dl>
+        </a>
+
+        <a href="{% url 'shop:cart' %}" class="cart">
+            <dl>
+                <dt>
+                    <span></span>
+                </dt>
+                <dd>购物车</dd>
+            </dl>
+        </a>
+
+        <a href="{% url 'shop:mine' %}" class="mine">
+            <dl>
+                <dt>
+                    <span></span>
+                </dt>
+                <dd>我的</dd>
             </dl>
         </a>
     </footer>
