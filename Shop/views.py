@@ -8,7 +8,7 @@ def home(request):
     all = Shop.objects.all()
     data = {
         "title": "首页",
-        "man_wheels": all[:5],
+        "main_wheels": all[:5],
     }
     return render(request, "main/home.html", context=data)
 
