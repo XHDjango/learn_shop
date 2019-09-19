@@ -25,13 +25,26 @@
             <div class="swiper-wrapper">
                 {% for main_wheel in main_wheels %}
                     <div class="swiper-slide">
-                        <img src="{{ main_wheel.img_url }}" alt="{{ main_wheel.name }}">
+                        <img src="{{ main_wheel.url }}" alt="{{ main_wheel.name }}">
                     </div>
                 {% endfor %}
             </div>
             <div class="swiper-pagination"></div>
         </div>
 
+        {#   顶部导航    #}
+        <div class="topMenu">
+            <nav>
+                <ul>
+                    {% for main_nav in main_navs %}
+                        <li>
+                            <img src="{{ main_nav.img_url }}" alt="">
+                            <span>{{ main_nav.name }}</span>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </nav>
+        </div>
 
     </div>
 {% endblock %}

@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-from .models import Shop
+from .models import Shop, Car
 
 
 # Create your views here.
@@ -8,7 +8,8 @@ def home(request):
     all = Shop.objects.all()
     data = {
         "title": "首页",
-        "main_wheels": all[:5],
+        "main_wheels": Car.objects.all(),
+        "main_navs":all[5:9],
     }
     return render(request, "main/home.html", context=data)
 
