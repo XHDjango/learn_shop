@@ -14,3 +14,29 @@
 {% block header %}
     <header></header>
 {% endblock %}
+
+{% block content %}
+    <div class="swiper-container">
+        <div id="home">
+
+            {#  顶部轮播   #}
+            <div class="swiper-wrapper" id="topSwiper">
+                {% for man_wheel in man_wheels %}
+                    <div class="swiper-slide">
+                        <img src="{{ man_wheel.img_url }}" alt="{{ man_wheel.name }}">
+                    </div>
+                {% endfor %}
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+
+            {#            <!-- 如果需要导航按钮 -->#}
+            {#            <div class="swiper-button-prev"></div>#}
+            {#            <div class="swiper-button-next"></div>#}
+            {##}
+            {#            <!-- 如果需要滚动条 -->#}
+            {#            <div class="swiper-scrollbar"></div>#}
+        </div>
+    </div>
+
+{% endblock %}
