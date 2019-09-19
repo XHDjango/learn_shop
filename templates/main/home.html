@@ -46,5 +46,16 @@
             </nav>
         </div>
 
+        {#  必购产品   #}
+        <div class="swiper-container" id="swiperMenu">
+            <div class="swiper-wrapper">
+                {% for main_mustby in main_mustbys %}
+                    <div class="swiper-slide">
+                        <img src="{{ main_mustby.url }}" alt="{{ main_mustby.name }}">
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
     </div>
 {% endblock %}

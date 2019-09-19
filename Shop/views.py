@@ -5,11 +5,11 @@ from .models import Shop, Car
 
 # Create your views here.
 def home(request):
-    all = Shop.objects.all()
     data = {
         "title": "首页",
         "main_wheels": Car.objects.all().filter(type="wheel"),
         "main_navs": Car.objects.all().filter(type="nav"),
+        "main_mustbys": Car.objects.all().filter(type="mustby"),
     }
     return render(request, "main/home.html", context=data)
 
