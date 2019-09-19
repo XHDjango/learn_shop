@@ -38,7 +38,7 @@
                 <ul>
                     {% for main_nav in main_navs %}
                         <li>
-                            <img src="{{ main_nav.img_url }}" alt="">
+                            <img src="{{ main_nav.url }}" alt="{{ main_nav.name }}">
                             <span>{{ main_nav.name }}</span>
                         </li>
                     {% endfor %}

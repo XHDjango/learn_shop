@@ -8,8 +8,8 @@ def home(request):
     all = Shop.objects.all()
     data = {
         "title": "首页",
-        "main_wheels": Car.objects.all(),
-        "main_navs":all[5:9],
+        "main_wheels": Car.objects.all().filter(type="wheel"),
+        "main_navs": Car.objects.all().filter(type="nav"),
     }
     return render(request, "main/home.html", context=data)
 
