@@ -57,5 +57,32 @@
             </div>
         </div>
 
+        {#  主页商店   #}
+        <div class="shop_container">
+            <h2>
+                <img src="{{ main_shop0.url }}" alt="{{ main_shop0.name }}">
+            </h2>
+            <fieldset>
+                {% for main_shop in main_shop1_2 %}
+                    <a href="#">
+                        <img src="{{ main_shop.url }}" alt="{{ main_shop.name }}">
+                    </a>
+                {% endfor %}
+            </fieldset>
+            <ul>
+                {% for main_shop in main_shop3_6 %}
+                    <li>
+                        <img src="{{ main_shop.url }}" alt="{{ main_shop.name }}">
+                    </li>
+                {% endfor %}
+            </ul>
+            <ol>
+                {% for main_shop in main_shop7_10 %}
+                    <li><a href="#"><img src="{{ main_shop.url }}" alt="{{ main_shop.name }}"></a></li>
+                {% endfor %}
+
+            </ol>
+        </div>
+
     </div>
 {% endblock %}
